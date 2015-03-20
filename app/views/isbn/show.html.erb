@@ -1,2 +1,8 @@
-<h1>Isbn: <%= @isbn %></h1>
-<p>Find me in app/views/isbn/show.html.erb</p>
+<dl>
+  <dt>Isbn</dt>
+  <dd><%= @isbn %></dd>
+  <dt>Title</dt>
+  <dd><%= @book.title %></dd>
+  <dt>Cover</dt>
+  <dd><img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&VLACCnr=8841686&coversize=large" ></dd>
+</dl>
