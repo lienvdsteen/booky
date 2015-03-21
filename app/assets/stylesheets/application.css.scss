@@ -32,6 +32,7 @@ $uiColor: #efefef;
 
 html, body {
   background-color: $uiBackground;
+  overflow: hidden;
 }
 
 .navbar {
@@ -82,6 +83,24 @@ p {
 
 .hero-image {
   width: 100%;
+}
+
+#app-home, #app-matches {
+  $transition: left;
+  $time: 1s;
+  -webkit-transition: $transition $time;
+  -moz-transition: $transition $time;
+  transition: $transition $time;
+}
+
+.open-matches {
+  #app-swipe {
+    left: -90%;
+  }
+
+  #app-matches {
+    left: 10%;
+  }
 }
 
 .btn-login {
