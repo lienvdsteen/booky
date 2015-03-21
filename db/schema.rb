@@ -14,23 +14,23 @@
 ActiveRecord::Schema.define(version: 20150321111603) do
 
   create_table "user_swiped_ratings", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "isbn"
-    t.boolean "rating"
+    t.integer "user_id", limit: 4
+    t.string  "isbn",    limit: 255
+    t.boolean "rating",  limit: 1
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid"
-    t.string   "email"
-    t.string   "username"
-    t.string   "city"
+    t.string   "uid",          limit: 255
+    t.string   "email",        limit: 255
+    t.string   "username",     limit: 255
+    t.string   "city",         limit: 255
     t.datetime "created_on"
-    t.string   "gender"
+    t.string   "gender",       limit: 255
     t.datetime "lastLogin"
-    t.string   "status"
+    t.string   "status",       limit: 255
     t.datetime "birthdate"
-    t.string   "token"
-    t.string   "token_secret"
+    t.string   "token",        limit: 255
+    t.string   "token_secret", limit: 255
   end
 
 end
