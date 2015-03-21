@@ -71,3 +71,27 @@ p {
   color: $uiColor;
   font-size: 1.1em;
 }
+
+.hero-image {
+  width: 100%;
+}
+
+.btn-login {
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.10) 100%);
+  box-shadow: 0px 6px 13px 0px rgba(0,0,0,0.25);
+  border-radius: 200px;
+  background-color: $uiBackground;
+  border: none;
+  padding: 14px 25px;
+
+  font-family: Montserrat-Bold;
+  font-size: 13px;
+  color: white !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.10) 100%);
+    background-color: $uiBackground + 20;
+  }
+}
