@@ -17,9 +17,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+
 // colors
 $uiBackground: #131313;
 
+* {
+  font-family: 'Lato', sans-serif;
+}
+
 html, body {
   background-color: $uiBackground;
+}
+
+.app-title {
+  
 }
