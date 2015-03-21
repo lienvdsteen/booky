@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321101214) do
+ActiveRecord::Schema.define(version: 20150321111603) do
 
   create_table "user_swiped_ratings", force: :cascade do |t|
     t.integer "user_id"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20150321101214) do
     t.datetime "lastLogin"
     t.string   "status"
     t.datetime "birthdate"
+    t.string   "token"
+    t.string   "token_secret"
   end
 
 end
