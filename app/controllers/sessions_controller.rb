@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    session[:user_hash] = auth_hash
+    @user = User.find_or_create_by_auth_hash(auth_hash)
+    session[:user_id] = @user.id
     # redirect_to '/'
     render text: auth_hash.inspect
   end
