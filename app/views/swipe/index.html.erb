@@ -15,11 +15,15 @@
   </nav>
 
   <div class="swipe-content">
-    <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" onclick="javascript:openSynopsis('<%= @isbn %>')">
+    <img src="<%= @book.image_url %>" onclick="javascript:openSynopsis('<%= @book.isbn %>')">
 
     <div class="swipe-buttons">
-      <a href="/swipe/<%=@isbn%>/dislike" class="btn btn-primary btn-not" data-method="post"><span class="fa fa-times"></span></a>
-      <a href="/swipe/<%=@isbn%>/like" class="btn btn-primary btn-yes"><span class="fa fa-check" data-method="post"></span></a>
+      <a href="<%= dislike_swipe_path(@book) %>" class="btn btn-primary btn-not" data-method="post">
+        <span class="fa fa-times"></span>
+      </a>
+      <a href="<%= like_swipe_path(@book) %>" class="btn btn-primary btn-yes" data-method="post">
+        <span class="fa fa-check"></span>
+      </a>
     </div>
   </div>
 </div>
