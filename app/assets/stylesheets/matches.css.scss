@@ -1,0 +1,41 @@
+// Place all the styles related to the matches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.html-matches, .body-matches {
+  background: white;
+
+  .navbar {
+    border-bottom: 1px solid #dddddd !important;
+    margin-bottom: 0px !important;
+  }
+
+  .navbar-matches .navbar-brand {
+    color: #487ECF !important;
+    background-color: white !important;
+  }
+
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  li {
+    padding: 10px;
+    color: #333;
+    font-size: 13px;
+    font-family: 'open sans';
+
+    .fa {
+      color: #ccc;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+  }
+
+  li.available {
+    .fa {
+      color: #48CF83;
+    }
+  }
+}
