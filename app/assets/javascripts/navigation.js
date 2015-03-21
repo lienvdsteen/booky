@@ -15,7 +15,7 @@ $(function() {
     }
   });
 
-  $("#app-matches .matches-content").load("/matches");
+  //$("#app-matches .matches-content").load("/matches");
 });
 
 function openSynopsis(isbn) {
