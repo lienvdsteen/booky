@@ -16,3 +16,7 @@ $(function() {
     }
   });
 });
+
+function toggleSynopsis(isbn) {
+  $("#app-matches").load("http://books.google.be/books?vid=ISBN"+isbn).select('#synopsistext');
+}
