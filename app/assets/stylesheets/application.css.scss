@@ -70,6 +70,14 @@ html {
   padding: 5px 10px;
 }
 
+.navbar-btn.navbar-btn-matches {
+  height: 50px;
+  padding: 10px 3%;
+  margin: 0px;
+  font-size: 18px;
+  color: white;
+}
+
 .title {
   display: block;
   margin-top: 50px;
@@ -106,6 +114,10 @@ p {
 
   #app-matches {
     left: 10%;
+  }
+
+  .navbar-btn-matches .fa-bookmark-o:before {
+    content: "\f02e";
   }
 }
 

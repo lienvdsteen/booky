@@ -9,10 +9,6 @@
   width: 100%;
   top: 0;
   left: 100%;
-}
-
-.html-matches, .body-matches {
-  background: white;
 
   .navbar {
     border-bottom: 1px solid #dddddd !important;
@@ -24,9 +20,21 @@
     background-color: white !important;
   }
 
+  h1 {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    height: 51px;
+    font-size: 18px;
+    margin: 0px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold';
+  }
+
   ul {
     margin: 0 !important;
     padding: 0 !important;
+    list-style: none;
   }
 
   li {
