@@ -18,8 +18,8 @@
     <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" >
 
     <div class="swipe-buttons">
-      <a href="" class="btn btn-primary btn-not"><span class="fa fa-times"></span></a>
-      <a href="" class="btn btn-primary btn-yes"><span class="fa fa-check"></span></a>
+      <a href="/swipe/<%=@isbn%>/dislike" class="btn btn-primary btn-not" data-method="post"><span class="fa fa-times"></span></a>
+      <a href="/swipe/<%=@isbn%>/like" class="btn btn-primary btn-yes"><span class="fa fa-check" data-method="post"></span></a>
     </div>
   </div>
 </div>
