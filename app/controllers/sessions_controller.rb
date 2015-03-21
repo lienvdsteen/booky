@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
   end
 
   def demo
-    @user = User.first
+    # create a new demo user
+    @user = User.create!
     session[:user_id] = @user.id
     redirect_to '/swipe'
   end
