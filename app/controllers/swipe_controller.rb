@@ -8,6 +8,9 @@ class SwipeController < ApplicationController
     @book = client.book(olid)
   end
 
+  def show
+  end
+
   def like
     @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: @current_user.id], rating: true)
   end
