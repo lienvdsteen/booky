@@ -1,4 +1,6 @@
 class Book < ActiveRecord::Base
+  has_many :user_swiped_ratings
+
   def self.random
     Book.find(self.random_id)
   end

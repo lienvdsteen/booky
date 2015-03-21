@@ -5,21 +5,27 @@ class SwipeController < ApplicationController
 
   def show
     @page = 'swipe'
-    @book = Book.find(params[:id])
+    set_book
     render action: :index
   end
 
   def like
-    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: current_user.id, rating: true)
+    set_book
+    @user_swiped_rating = current_user.user_swiped_ratings.create!(book: @book, rating: true)
     redirect_to_next_book
   end
 
   def dislike
-    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: current_user.id, rating: false)    
+    set_book
+    @user_swiped_rating = current_user.user_swiped_ratings.create!(book: @book, rating: false)
     redirect_to_next_book
   end
 
   private
+  def set_book
+    @book = Book.find(params[:id])
+  end
+
   def redirect_to_next_book
     redirect_to swipe_path(Book.random)
   end

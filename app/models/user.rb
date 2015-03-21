@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :user_swiped_ratings
 
   def self.find_or_create_by_auth_hash(auth_hash)
     self.find_by(uid: auth_hash.uid) || self.create_by_auth_hash(auth_hash)
