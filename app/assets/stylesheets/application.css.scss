@@ -148,14 +148,37 @@ p {
 
   img {
     width: 100%;
+    border-radius: 5px;
   }
 
   .swipe-buttons {
-    display: inline-block;
-    margin-top: -50px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    margin-top: -30px;
+
+    .btn {
+      display: inline-block;
+      margin: 0;
+      border-radius: 0;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
+      font-size: 25px;
+      border: none !important;
+      padding: 10px 25px 10px 25px;
+    }
   }
 
-  .btn-nope {
+  .btn-not {
+    border-radius: 100px 0 0 100px !important;
+    color: #E85151;
+    margin-right: -2px !important;
+  }
 
+  .btn-yes {
+    padding-left: 20px !important;
+    border-radius: 0 100px 100px 0 !important;
+    color: #48CF83;
+    margin-left: -2px !important;
   }
 }
