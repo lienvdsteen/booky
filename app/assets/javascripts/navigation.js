@@ -18,9 +18,10 @@ $(function() {
 });
 
 function openSynopsis(isbn) {
-  $.get("http://books.google.be/books?vid=ISBN"+isbn,
+  $.get("https://www.googleapis.com/books/v1/volumes?q=isbn"+isbn,
     function(data) {
-      $('#app-synopsis .synopsis-content').html($(data).select('#synopsistext').html());
+      var book = data.items[0].volumeInfo;
+      $('#app-synopsis .synopsis-content').html(book.description);
       $("body").addClass("open-synopsis");
     }
   );
