@@ -7,4 +7,12 @@ class SwipeController < ApplicationController
     olid = keys.first.values.first.split('/').last
     @book = client.book(olid)
   end
+
+  def like
+    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: @current_user.id], rating: true)
+  end
+
+  def dislike
+    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: @current_user.id, rating: false)    
+  end
 end
