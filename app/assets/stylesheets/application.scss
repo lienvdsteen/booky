@@ -31,6 +31,12 @@ html, body {
   background-color: $uiBackground;
 }
 
-.app-title {
-  
+.navbar-brand
+{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
 }
