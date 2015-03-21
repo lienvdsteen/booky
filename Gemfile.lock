@@ -98,6 +98,7 @@ GEM
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
+    omniauth-openbibid (0.0.1)
     openlibrary (2.1.3)
       activesupport (~> 4)
       hashie (~> 2.0.2)
@@ -191,6 +192,7 @@ DEPENDENCIES
   mysql2
   omniauth
   omniauth-oauth
+  omniauth-openbibid
   openlibrary
   pg
   rails (= 4.2.1)

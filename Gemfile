@@ -28,6 +28,7 @@ gem 'openlibrary'
 
 gem 'omniauth'
 gem 'omniauth-oauth'
+gem 'omniauth-openbibid'
 
 gem 'better_errors'
 
