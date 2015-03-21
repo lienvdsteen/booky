@@ -21,8 +21,8 @@
 
 // fonts
 //@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 // colors
 $uiBackground: #487ECF;
@@ -58,7 +58,8 @@ body {
   background-color: $uiBackground !important;
   border: none;
 
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: 18px;
   color: white !important;
   letter-spacing: 1px;
@@ -154,7 +155,7 @@ p {
   .swipe-buttons {
     text-align: center;
     position: relative;
-    z-index: 999;
+    z-index: 8;
     margin-top: -30px;
 
     .btn {
