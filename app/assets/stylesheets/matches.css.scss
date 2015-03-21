@@ -28,13 +28,20 @@
   }
 
   li {
-    padding: 10px;
+    padding-top: 16px;
+    padding-bottom: 8px;
     color: #333;
     font-size: 13px;
     font-family: 'open sans';
 
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
     .fa {
       color: #ccc;
+      margin-left: 15px;
       margin-right: 10px;
       font-size: 16px;
     }
