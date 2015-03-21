@@ -12,7 +12,7 @@ class SwipeController < ApplicationController
   end
 
   def like
-    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: @current_user.id], rating: true)
+    @user_swiped_rating = UserSwipedRating.create!(isbn: params[:id], user_id: @current_user.id, rating: true)
   end
 
   def dislike
