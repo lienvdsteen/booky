@@ -10,7 +10,14 @@
 <body class="body-<%= @page %>">
   <%= yield %>
 
-  <div id="app-matches"></div>
+  <div id="app-matches">
+    <h1>Matches</h1>
+    <div class="matches-content">
+      <p class="text-center">
+        Loading...
+      </p>
+    </div>
+  </div>
   <div id="app-synopsis">
     <h1>
       Synopsis

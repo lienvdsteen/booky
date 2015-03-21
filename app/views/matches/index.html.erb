@@ -1,9 +1,8 @@
-  <h1>Matches</h1>
-  <ul>
-    <% @matches.each do | match | %>
-    <li class="<%= rand(1) == 1 ? 'available' : '' %>">
-      <i class="fa fa-book"></i>
-      <%= match.title %>
-    </li>
-    <% end %>
-  </ul>
+<ul>
+  <% @matches.each do | match | %>
+  <li class="<%= rand(1) == 1 ? 'available' : '' %>">
+    <i class="fa fa-book"></i>
+    <%= match.title %>
+  </li>
+  <% end %>
+</ul>

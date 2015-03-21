@@ -1,7 +1,6 @@
 function toggleMatches() {
-  $("#app-matches").load("/matches", function() {
-    $("body").toggleClass("open-matches");
-  });
+  $("body").toggleClass("open-matches");
+  $("#app-matches .matches-content").load("/matches");
 }
 
 $(function() {
@@ -15,6 +14,8 @@ $(function() {
       }
     }
   });
+
+  $("#app-matches .matches-content").load("/matches");
 });
 
 function openSynopsis(isbn) {
