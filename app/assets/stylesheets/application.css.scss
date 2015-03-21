@@ -64,13 +64,20 @@ html, body {
 }
 
 .title {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
   color: white;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  font-family: 'open sans';
+  font-weight: 600;
 }
 
 p {
   color: $uiColor;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  font-family: 'open sans';
+  margin-bottom: 50px;
 }
 
 .hero-image {
