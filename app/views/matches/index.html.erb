@@ -1,23 +1,9 @@
   <h1>Matches</h1>
   <ul>
-    <li>
+    <% @matches.each do | match | %>
+    <li class="<%= rand(1) == 1 ? 'available' : '' %>">
       <i class="fa fa-book"></i>
-      Fifty Shades of Grey
+      <%= match.title %>
     </li>
-    <li class="available">
-      <i class="fa fa-book"></i>
-      Pruple Cow
-    </li>
-    <li>
-      <i class="fa fa-book"></i>
-      Fifty Shades of Grey
-    </li>
-    <li>
-      <i class="fa fa-book"></i>
-      Ruby on Rails
-    </li>
-    <li>
-      <i class="fa fa-book"></i>
-      CSS for Dummies
-    </li>
+    <% end %>
   </ul>
