@@ -140,3 +140,22 @@ p {
     background-color: $uiBackground + 20;
   }
 }
+
+
+.swipe-content {
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  .swipe-buttons {
+    display: inline-block;
+    margin-top: -50px;
+  }
+
+  .btn-nope {
+
+  }
+}

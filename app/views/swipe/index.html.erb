@@ -14,8 +14,12 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-  <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" >
+  <div class="swipe-content">
+    <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" >
 
-  <a href="" class="btn btn-primary btn-not"><span class="fa fa-times"></span></a>.
-  <a href="" class="btn btn-primary btn-yes"><span class="fa fa-check"></span></a>
+    <div class="swipe-buttons">
+      <a href="" class="btn btn-primary btn-not"><span class="fa fa-times"></span></a>
+      <a href="" class="btn btn-primary btn-yes"><span class="fa fa-check"></span></a>
+    </div>
+  </div>
 </div>
