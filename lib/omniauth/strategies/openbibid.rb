@@ -6,7 +6,7 @@ module OmniAuth
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
-      option :client_options, { :site => 'https://mijn.bibliotheek.be/openbibid/rest',
+      option :client_options, { :site => 'https://staging-mijn.bibliotheek.be/openbibid/rest',
                                :request_token_path => "/requestToken",
                                :access_token_path  => "/accessToken",
                                :authorize_path     => "/auth/authorize"}
@@ -16,7 +16,7 @@ module OmniAuth
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid { request.params['userId'] }
+      uid { access_token.params[:userId] }
 
       info do
         {
@@ -32,7 +32,10 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= MultiJson.decode(access_token.get("/user/#{uid}")).body
+        user_id = access_token.params[:userId]
+        body = access_token.get("/user/#{user_id}").body
+        xml_doc = Nokogiri::XML(body)
+        @raw_info ||= MultiJson.decode(body)
       end
     end
   end
