@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150321124459) do
     t.string   "language",         limit: 255
     t.string   "author_firstname", limit: 255
     t.string   "author_lastname",  limit: 255
+    t.integer  "beid",             limit: 8
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end

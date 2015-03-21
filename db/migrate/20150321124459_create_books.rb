@@ -8,6 +8,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :language
       t.string :author_firstname
       t.string :author_lastname
+      t.integer :beid, limit: 8
 
       t.timestamps null: false
     end

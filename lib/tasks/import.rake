@@ -6,13 +6,14 @@ namespace :import do
       year = row['year_published'].try(:to_i)
       if (isbn = row['ISBN'])
         book = Book.new(isbn: isbn.gsub('-', ''),
-                     title: row['title'][0..1000],
-                     year_published: year, 
-                     book_type: row['type'],
-                     language: row['language'],
-                     author_firstname: row['author_firstname'],
-                     author_lastname: row['author_lastname']
-                    )
+                        beid: row['id'].split('^').last.to_i,
+                        title: row['title'][0..1000],
+                        year_published: year, 
+                        book_type: row['type'],
+                        language: row['language'],
+                        author_firstname: row['author_firstname'],
+                        author_lastname: row['author_lastname']
+                        )
         if book.book_type == 'Boek' && book.year_published.is_a?(Integer) && book.year_published > 1950
           i+=1
           book.save!
