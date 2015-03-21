@@ -1,4 +1,4 @@
-class AppController < ApplicationController
+class SwipeController < ApplicationController
   def index
     @isbn = '0345803485'
     client = Openlibrary::Client.new
