@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// colors
+$uiBackground: #131313;
+
+html, body {
+  background-color: $uiBackground;
+}
