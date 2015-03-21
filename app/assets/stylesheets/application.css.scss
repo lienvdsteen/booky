@@ -112,6 +112,8 @@ p {
 .navbar-btn-matches {
   z-index: 7;
   position: relative;
+  background: transparent !important;
+  border: 0px;
 }
 
 .open-matches {
@@ -124,7 +126,7 @@ p {
   }
 
   .navbar-btn-matches .fa-bookmark-o:before {
-    content: "\f02d";
+    content: "\f02e";
   }
 }
 
