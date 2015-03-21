@@ -169,9 +169,9 @@ p {
       margin: 0;
       border-radius: 0;
       background: #FFFFFF;
-      box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
+      // box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.25);
       font-size: 25px;
-      border: none !important;
+      border: none;
       padding: 10px 25px 10px 25px;
     }
   }
@@ -187,5 +187,6 @@ p {
     border-radius: 0 100px 100px 0 !important;
     color: #48CF83;
     margin-left: -2px !important;
+    border-left: 1px solid #ddd !important;
   }
 }
