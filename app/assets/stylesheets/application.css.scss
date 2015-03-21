@@ -109,6 +109,11 @@ p {
   transition: $transition $time;
 }
 
+.navbar-btn-matches {
+  z-index: 7;
+  position: relative;
+}
+
 .open-matches {
   #app-swipe {
     left: -90%;
@@ -116,6 +121,10 @@ p {
 
   #app-matches {
     left: 10%;
+  }
+
+  .navbar-btn-matches .fa-bookmark-o:before {
+    content: "\f02d";
   }
 }
 
