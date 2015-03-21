@@ -1,13 +1,30 @@
-<div class="app-home text-center">
-  <div class="app-home-intro">
-    <i class="fa fa-book fa-5x"></i>
-    <br>
-    <span class="title">Like a book?</span>
-    <p>
-      If it's still available,<br>
-      you've got a match!
-    </p>
-  </div>
+<div id="app-swipe">
+  <nav class="navbar navbar-default navbar-<%= @page %>">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <%= @title || 'Book.y' %>
+        </a>
+        <a class="btn btn-default navbar-btn" href="javascript:showMatches()">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bookmark-o"></i>
+        </a>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
 
-  <a href="/auth/openbibid" class="btn btn-default" type="submit">Login with OpenBIB-ID</a>
+  <div class="text-center">
+    <div class="app-home-intro">
+      <i class="fa fa-book fa-5x"></i>
+      <br>
+      <span class="title">Like a book?</span>
+      <p>
+        If it's still available,<br>
+        you've got a match!
+      </p>
+    </div>
+
+    <a href="/auth/openbibid" class="btn btn-default" type="submit">Login with OpenBIB-ID</a>
+  </div>
 </div>
