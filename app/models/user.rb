@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :user_swiped_ratings
-
+  
   def self.find_or_create_by_auth_hash(auth_hash)
     self.find_by(uid: auth_hash.uid) || self.create_by_auth_hash(auth_hash)
   end
@@ -17,5 +17,9 @@ class User < ActiveRecord::Base
       status: auth_hash.extra.raw_info.status,
       birthdate: auth_hash.extra.raw_info.birthdate
       )
+  end
+
+  def get_likes
+    self.user_swiped_ratings.where(rating: true)
   end
 end
