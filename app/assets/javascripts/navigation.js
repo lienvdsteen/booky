@@ -17,6 +17,15 @@ $(function() {
   });
 });
 
-function toggleSynopsis(isbn) {
-  $("#app-matches").load("http://books.google.be/books?vid=ISBN"+isbn).select('#synopsistext');
+function openSynopsis(isbn) {
+  $.get("http://books.google.be/books?vid=ISBN"+isbn,
+    function(data) {
+      $('#app-synopsis .synopsis-content').html($(data).select('#synopsistext').html());
+      $("body").addClass("open-synopsis");
+    }
+  );
+}
+
+function closeSynopsis(isbn) {
+  $("body").removeClass("open-synopsis");
 }

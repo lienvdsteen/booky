@@ -15,7 +15,7 @@
   </nav>
 
   <div class="swipe-content">
-    <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" >
+    <img src="http://webservices.bibliotheek.be/index.php?func=cover&ISBN=<%= @isbn %>&coversize=large" onclick="javascript:openSynopsis(<%= @isbn %>)">
 
     <div class="swipe-buttons">
       <a href="/swipe/<%=@isbn%>/dislike" class="btn btn-primary btn-not" data-method="post"><span class="fa fa-times"></span></a>

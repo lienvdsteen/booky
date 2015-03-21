@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#app-matches {
+
+
+#app-synopsis {
+  display: none;
   position: absolute;
   height: 100%;
   background: white;
   width: 100%;
   top: 0;
-  left: 100%;
+  left: 0;
 
   h1 {
     display: block;
@@ -20,29 +23,8 @@
     text-transform: uppercase;
     font-family: 'Montserrat-Bold';
   }
+}
 
-  ul {
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none;
-  }
-
-  li {
-    padding: 10px;
-    color: #333;
-    font-size: 13px;
-    font-family: 'open sans';
-
-    .fa {
-      color: #ccc;
-      margin-right: 10px;
-      font-size: 16px;
-    }
-  }
-
-  li.available {
-    .fa {
-      color: #48CF83;
-    }
-  }
+.open-matches #app-synopsis {
+  display: block;
 }

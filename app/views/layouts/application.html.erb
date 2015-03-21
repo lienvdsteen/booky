@@ -10,9 +10,11 @@
 <body class="body-<%= @page %>">
   <%= yield %>
 
-  <div id="app-matches">
-
+  <div id="app-matches"></div>
+  <div id="app-synopsis">
+    <h1>Matches</h1>
+    <a href="javascript:closeSynopis()" class="pull-right">Close</a>
+    <div class="synopsis-content"></div>
   </div>
-
 </body>
 </html>
