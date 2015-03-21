@@ -8,6 +8,12 @@ class SessionsController < ApplicationController
     redirect_to '/swipe'
   end
 
+  def demo
+    @user = User.first
+    session[:user_id] = @user.id
+    redirect_to '/swipe'
+  end
+
   protected
 
   def auth_hash
